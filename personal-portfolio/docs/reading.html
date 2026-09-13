@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>my recs — Lucia Paulino</title>
+
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .reading-list, .media-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+          gap: 32px 24px;
+          list-style: none;
+          padding: 0;
+          margin: 24px 0 0;
+        }
+      
+        .reading-list li, .media-list li {
+          min-width: 0;
+          padding: 0;
+          margin: 0;
+          background: transparent;
+          border: 0;
+          border-radius: 0;
+          color: var(--soft, #475569);
+        }
+      
+        .book-cover {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          aspect-ratio: 2 / 3;
+          overflow: hidden;
+          margin-bottom: 12px;
+          border-radius: 5px;
+          background: #eef0f4;
+        }
+      
+        .book-cover img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      
+        .cover-placeholder {
+          padding: 16px;
+          font-size: 13px;
+          text-align: center;
+        }
+      
+        .book-title {
+          margin: 0;
+          font-size: 15px;
+          font-weight: 600;
+          line-height: 1.4;
+          color: var(--ink, #1e293b);
+        }
+      
+        .book-author {
+          margin: 4px 0 0;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+      
+        .book-rating {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-top: 8px;
+          font-size: 12px;
+        }
+      
+        .stars {
+          position: relative;
+          display: inline-block;
+          font-family: Arial, sans-serif;
+          font-size: 18px;
+          line-height: 1;
+          letter-spacing: 1px;
+          white-space: nowrap;
+          color: #d8dce5;
+        }
+      
+        .stars-fill {
+          position: absolute;
+          inset: 0 auto 0 0;
+          width: var(--fill);
+          overflow: hidden;
+          color: #a87927;
+        }
+      
+        @media (max-width: 400px) {
+          .reading-list, .media-list {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px 16px;
+          }
+        }
+      </style>
+  </head>
+
+<body>
+    <main>
+      <header class="site-header">
+        <a class="site-name" href="index.html">Lucia Paulino</a>
+
+        <nav aria-label="Main navigation">
+          <a href="about.html">about me :)</a>
+          <a href="projects.html">projects</a>
+          <a href="reading.html">my recs</a>
+          <a
+            href="LUCIA_C_PAULINO_RESUME.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            resume
+          </a>
+        </nav>
+      </header>
+
+      <section class="page-intro compact">
+        <h1>my recs</h1>
+      </section>
+
+      <section class="content-section">
+        <h2>reading</h2>
+
+        <ul class="reading-list">
+          <li data-cover="recursion">Recursion — Blake Crouch · 3/5</li>
+          <li data-cover="el-olvido-que-seremos">El olvido que seremos — Héctor Abad Faciolince · 4/5 </li>
+          <li data-cover="the-looming-tower">
+            The Looming Tower: Al-Qaeda and the Road to 9/11
+            — Lawrence Wright · 2.5/5
+          </li>
+          <li data-cover="the-hunger-games">The Hunger Games (#1) · 4/5 </li>
+          <li data-cover="the-things-they-carried">The Things They Carried — Tim O’Brien · 4/5</li>
+          <li data-cover="the-hacked-world-order">
+            The Hacked World Order: How Nations Fight, Trade, Maneuver,
+            and Manipulate in the Digital Age — Adam Segal · 3.5/5
+          </li>
+          <li data-cover="siddhartha">Siddhartha · 3/5</li>
+          <li data-cover="the-lincoln-highway">The Lincoln Highway · 4/5</li>
+
+          <li data-cover="harry-potter-1">Harry Potter #1 · 4/5</li>
+          <li data-cover="harry-potter-2">Harry Potter #2 · 4/5</li>
+          <li data-cover="harry-potter-3">Harry Potter #3 · 5/5</li>
+          <li data-cover="harry-potter-4">Harry Potter #4 · 4/5</li>
+          <li data-cover="harry-potter-5">Harry Potter #5 · 3.5/5</li>
+          <li data-cover="harry-potter-6">Harry Potter #6 · 4/5</li>
+          <li data-cover="harry-potter-7">Harry Potter #7 · 3.5/5</li>
+
+          <li data-cover="the-seven-husbands-of-evelyn-hugo">The Seven Husbands of Evelyn Hugo · 4/5</li>
+          <li data-cover="the-picture-of-dorian-gray">The Picture of Dorian Gray · 4/5</li>
+          <li data-cover="brave-new-world">Brave New World · 3.7/5</li>
+          <li data-cover="the-lemon-tree">
+            The Lemon Tree: An Arab, a Jew, and the Heart of the Middle East
+            · 4/5
+          </li>
+          <li data-cover="pachinko">Pachinko · 5/5</li>
+          <li data-cover="factfulness">
+            Factfulness: Ten Reasons We're Wrong About the World—and Why
+            Things Are Better Than You Think · 4/5
+          </li>
+          <li data-cover="project-hail-mary">Project Hail Mary · 5/5</li>
+          <li data-cover="daisy-jones-and-the-six">Daisy Jones &amp; The Six · 3/5</li>
+          <li data-cover="dark-matter">Dark Matter · 5/5</li>
+          <li data-cover="legend-1">Legend (#1) · 4/5</li>
+          <li data-cover="a-tale-of-two-cities">A Tale of Two Cities · 5/5</li>
+          <li data-cover="1984">1984 · 4/5</li>
+          <li data-cover="julius-caesar">Julius Caesar — William Shakespeare · 4/5</li>
+          <li data-cover="of-mice-and-men">Of Mice and Men · 3/5</li>
+          <li data-cover="the-great-gatsby">The Great Gatsby · 3.5/5</li>
+          <li data-cover="frankenstein">Frankenstein · 4/5</li>
+          <li data-cover="the-metamorphosis">The Metamorphosis · 1/5</li>
+          <li data-cover="fahrenheit-451">Fahrenheit 451 · 2/5</li>
+          <li data-cover="children-of-blood-and-bone">Children of Blood and Bone · 3/5</li>
+          <li data-cover="we-were-liars">We Were Liars · 2/5</li>
+          <li data-cover="angels-and-demons">Angels &amp; Demons · 3/5</li>
+          <li data-cover="the-da-vinci-code">The Da Vinci Code · 5/5</li>
+          <li data-cover="lies-we-tell-ourselves">Lies We Tell Ourselves · 4.5/5</li>
+          <li data-cover="gone-girl">Gone Girl · 5/5</li>
+          <li data-cover="mind-gym">Mind Gym: An Athlete's Guide to Inner Excellence · 4/5</li>
+
+          <li data-cover="shatter-me-series"> Shatter Me Series · 4/5</li>
+
+          <li data-cover="animal-farm">Animal Farm · 5/5</li>
+          <li data-cover="pride-and-prejudice">Pride and Prejudice · 2/5</li>
+          <li data-cover="all-the-bright-places">All the Bright Places · 5/5</li>
+          <li data-cover="the-three-body-problem">The Three-Body Problem · 4/5</li>
+          <li data-cover="wool">Wool · 3/5</li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <h2>tv shows</h2>
+        <ul class="media-list">
+          <li>
+            <div class="book-cover">
+              <img src="tv/atypical.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">Atypical</h3>
+          </li>
+          <li>
+            <div class="book-cover">
+              <img src="tv/blackmirror.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">Black Mirror</h3>
+          </li>
+          <li>
+            <div class="book-cover">
+              <img src="tv/criminal%20minds.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">Criminal Minds</h3>
+          </li>
+          <li>
+            <div class="book-cover">
+              <img src="tv/dark.jpeg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">Dark</h3>
+          </li>
+          <li>
+            <div class="book-cover">
+              <img src="tv/la-casa-de-papel.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">La casa de papel</h3>
+          </li>
+          <li>
+            <div class="book-cover">
+              <img src="tv/modern-family.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">Modern Family</h3>
+          </li>
+          <li>
+            <div class="book-cover">
+              <img src="tv/pll.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">Pretty Little Liars</h3>
+          </li>
+          <li>
+            <div class="book-cover">
+              <img src="tv/severance.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">Severance</h3>
+          </li>
+          <li>
+            <div class="book-cover">
+              <img src="tv/stranger-things.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">Stranger Things</h3>
+          </li>
+          <li>
+            <div class="book-cover">
+              <img src="tv/suits.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">Suits</h3>
+          </li>
+          <li>
+            <div class="book-cover">
+              <img src="tv/the-society.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">The Society</h3>
+          </li>
+          <li>
+            <div class="book-cover">
+              <img src="tv/the100.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">The 100</h3>
+          </li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <h2>movies</h2>
+        <ul class="media-list">
+          <li>
+            <div class="book-cover">
+              <img src="movies/catching-fire.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">The Hunger Games: Catching Fire</h3>
+          </li>
+          <li>
+            <div class="book-cover">
+              <img src="movies/coherence.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">Coherence</h3>
+          </li>
+          <li>
+            <div class="book-cover">
+              <img src="movies/contratiempo.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">Contratiempo</h3>
+          </li>
+          <li>
+            <div class="book-cover">
+              <img src="movies/interstellar.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">Interstellar</h3>
+          </li>
+          <li>
+            <div class="book-cover">
+              <img src="movies/oppenheimer.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">Oppenheimer</h3>
+          </li>
+          <li>
+            <div class="book-cover">
+              <img src="movies/thehangover.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">The Hangover</h3>
+          </li>
+          <li>
+            <div class="book-cover">
+              <img src="movies/whiplash.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">Whiplash</h3>
+          </li>
+          <li>
+            <div class="book-cover">
+              <img src="movies/wintersolider.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">Captain America: The Winter Soldier</h3>
+          </li>
+          <li>
+            <div class="book-cover">
+              <img src="movies/zootopia.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="book-title">Zootopia</h3>
+          </li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <h2>music</h2>
+        <p>coming soon</p>
+      </section>
+
+      <footer class="site-footer">
+        <div>
+          <p class="kicker">Let’s talk</p>
+          <h2>Say hello.</h2>
+        </div>
+
+        <div class="footer-links">
+          <a href="mailto:luciapaulino2024@gmail.com">Email</a>
+
+          <a
+            href="https://linkedin.com/in/lucia-paulino"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="https://github.com/luciapau-30"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
+
+        <p class="copyright">
+          © 2026 Lucia Paulino · Los Angeles &amp; Panama City
+        </p>
+      </footer>
+    </main>
+    <script>
+const list = document.querySelector(".reading-list");
+
+  const books = [...list.children].map((item) => {
+    const text = item.textContent.replace(/\s+/g, " ").trim();
+    const match = text.match(/\s*·\s*(\d+(?:\.\d+)?)\/5\s*$/);
+    const rating = match ? Number(match[1]) : null;
+    const description = match ? text.slice(0, match.index) : text;
+    const [title, ...authorParts] = description.split(" — ");
+
+    // Each book keeps its own cover filename when reordered.
+
+    return {
+      item,
+      title,
+      author: authorParts.join(" — "),
+      rating,
+      cover: item.dataset.cover
+    };
+  });
+
+  books.sort((a, b) =>
+    (b.rating ?? -1) - (a.rating ?? -1) ||
+    a.title.localeCompare(b.title)
+  );
+
+  for (const book of books) {
+    const cover = document.createElement("div");
+    cover.className = "book-cover";
+
+    const img = document.createElement("img");
+    img.alt = ""; // The title immediately below identifies the book.
+    img.loading = "lazy";
+    img.decoding = "async";
+
+    img.addEventListener("error", () => {
+      const placeholder = document.createElement("span");
+      placeholder.className = "cover-placeholder";
+      placeholder.textContent = "cover coming soon";
+      cover.replaceChildren(placeholder);
+    });
+
+    img.src = `book-covers/${book.cover}.jpg`;
+    cover.append(img);
+
+    const title = document.createElement("h3");
+    title.className = "book-title";
+    title.textContent = book.title;
+
+    book.item.replaceChildren(cover, title);
+
+    if (book.author) {
+      const author = document.createElement("p");
+      author.className = "book-author";
+      author.textContent = book.author;
+      book.item.append(author);
+    }
+
+    const rating = document.createElement("div");
+    rating.className = "book-rating";
+
+    if (book.rating === null) {
+      rating.textContent = "not rated yet";
+    } else {
+      const stars = document.createElement("span");
+      stars.className = "stars";
+      stars.setAttribute("aria-hidden", "true");
+      stars.style.setProperty("--fill", `${book.rating / 5 * 100}%`);
+      stars.textContent = "★★★★★";
+
+      const fill = document.createElement("span");
+      fill.className = "stars-fill";
+      fill.textContent = "★★★★★";
+      stars.append(fill);
+
+      const score = document.createElement("span");
+      score.textContent = `${book.rating}/5`;
+      score.setAttribute("aria-label", `${book.rating} out of 5 stars`);
+
+      rating.append(stars, score);
+    }
+
+    book.item.append(rating);
+    list.append(book.item);
+  }
+
+  // Keep a tidy placeholder until each poster image has been added.
+  document.querySelectorAll(".media-list img").forEach((img) => {
+    const showPlaceholder = () => {
+      const placeholder = document.createElement("span");
+      placeholder.className = "cover-placeholder";
+      placeholder.textContent = "cover coming soon";
+      img.parentElement.replaceChildren(placeholder);
+    };
+    img.addEventListener("error", showPlaceholder, { once: true });
+    if (img.complete && img.naturalWidth === 0) showPlaceholder();
+  });
+    </script>
+  </body>
+</html>
