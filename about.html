@@ -10,75 +10,51 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
-      .about-layout {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) 220px;
-        gap: 48px;
-        align-items: start;
-      }
-
-      .about-layout .about-story {
-        min-width: 0;
-        width: 100%;
-        max-width: none;
-      }
-
       .about-logos {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-        padding-top: 48px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 28px;
+        margin: 32px 0 48px;
+        padding: 0;
       }
 
-      .about-logos img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-      }
-
-      .about-logos .viterbi-logo,
-      .about-logos .kpmg-logo {
-        width: 220px;
-      }
-
-      .about-club {
-        width: 100%;
+      .about-affiliation {
+        flex: 0 1 140px;
+        width: 140px;
+        margin: 0;
         text-align: center;
       }
 
-      .about-logos .about-club img {
-        width: 100px;
+      .about-logos .about-affiliation img {
+        display: block;
+        width: 140px;
+        max-width: 100%;
         height: 100px;
         object-fit: contain;
         margin: 0 auto 12px;
       }
 
-      .about-club p {
-        margin: 0;
+      .about-affiliation figcaption {
         font-size: 13px;
         line-height: 1.5;
       }
 
-      .about-club strong,
-      .about-club span {
+      .about-affiliation strong,
+      .about-affiliation span {
         display: block;
       }
 
-      .about-club span {
+      .about-affiliation span {
         margin-top: 4px;
         opacity: 0.7;
       }
 
       @media (max-width: 700px) {
-        .about-layout {
-          grid-template-columns: 1fr;
-          gap: 16px;
-        }
-
         .about-logos {
-          padding-top: 0;
-          padding-bottom: 24px;
+          gap: 24px;
         }
       }
     </style>
@@ -113,95 +89,99 @@
         <h1>about me</h1>
       </section>
 
-      <div class="about-layout">
-        <section class="content-section about-story">
-          <p>
-            I grew up in Panama and now live in Los Angeles. I’m interested in
-            understanding how software and systems work, from the algorithms
-            behind them to the ways people use them. I especially enjoy building
-            products that can make everyday life a little easier.
-          </p>
+      <section class="content-section about-story">
+        <p>
+          I grew up in Panama and now live in Los Angeles. I’m interested in
+          understanding how software and systems work, from the algorithms
+          behind them to the ways people use them. I especially enjoy building
+          products that can make everyday life a little easier.
+        </p>
 
-          <p>
-            Before computer science, gymnastics shaped the way I approach every
-            challenge I face. As a five-time member of Panama’s national team,
-            I learned to stay determined through everything, respond to feedback,
-            and keep showing up no matter what, especially when progress doesn’t
-            feel linear.
-          </p>
+        <p>
+          Before computer science, gymnastics shaped the way I approach every
+          challenge I face. As a five-time member of Panama’s national team,
+          I learned to stay determined through everything, respond to feedback,
+          and keep showing up no matter what, especially when progress doesn’t
+          feel linear.
+        </p>
 
-          <p>
-            Today, I bring those same values and mindset into building software
-            and teaching. At USC, I am a Learning Assistant for the Technology
-            and Applied Computing program (TAC), helping students make their
-            first steps into computer science. Additionally, I work with USC’s
-            Student Athlete Academic Services, tutoring student-athletes in
-            STEM subjects.
-          </p>
+        <p>
+          Today, I bring those same values and mindset into building software
+          and teaching. At USC, I am a Learning Assistant for the Technology
+          and Applied Computing program (TAC), helping students make their
+          first steps into computer science. Additionally, I work with USC’s
+          Student Athlete Academic Services, tutoring student-athletes in
+          STEM subjects.
+        </p>
 
-          <p>
-            Last summer, I worked at KPMG as a technology consulting intern.
-            I helped develop a roadmap for a core banking transformation at a
-            leading Latin American bank, automated a month-long shift-allocation
-            process down to a few hours, and built a centralized data pipeline
-            to consolidate project information across consulting teams.
-            Outside of work, I began working on my CompTIA Security+
-            certification, and spent the rest of my time with family and friends,
-            finding new beaches to surf around home, and training for a half
-            marathon.
-          </p>
-        </section>
+        <p>
+          Last summer, I worked at KPMG as a technology consulting intern.
+          I helped develop a roadmap for a core banking transformation at a
+          leading Latin American bank, automated a month-long shift-allocation
+          process down to a few hours, and built a centralized data pipeline
+          to consolidate project information across consulting teams.
+          Outside of work, I began working on my CompTIA Security+
+          certification, and spent the rest of my time with family and friends,
+          finding new beaches to surf around home, and training for a half
+          marathon.
+        </p>
+      </section>
 
-        <aside
-          class="about-logos"
-          aria-label="Education, work, and campus involvement"
-        >
+      <aside
+        class="about-logos"
+        aria-label="Education, work, and campus involvement"
+      >
+        <figure class="about-affiliation">
           <img
-            class="viterbi-logo"
             src="about-pics/usc-viterbi-logo.webp"
             alt="USC Viterbi School of Engineering"
           >
+        </figure>
 
+        <figure class="about-affiliation">
           <img
-            class="kpmg-logo"
             src="about-pics/kpmg-logo.png"
             alt="KPMG"
           >
+          <figcaption>
+            <strong>KPMG</strong>
+            <span> technology consulting intern </span>
+          </figcaption>
+        </figure>
 
-          <div class="about-club">
-            <img
-              src="about-pics/usc-cyborg.svg"
-              alt="Cyborg USC logo"
-            >
-            <p>
-              <strong>cyborg usc</strong>
-              <span>executive board · social media / marketing</span>
-            </p>
-          </div>
+        <figure class="about-affiliation">
+          <img
+            src="about-pics/usc-cyborg.svg"
+            alt="Cyborg USC logo"
+          >
+          <figcaption>
+            <strong>cyborg usc</strong>
+            <span>executive board · social media / marketing</span>
+          </figcaption>
+        </figure>
 
-          <div class="about-club">
-            <img
-              src="about-pics/scope-logo.png"
-              alt="SCOPE USC logo"
-            >
-            <p>
-              <strong>scope usc</strong>
-              <span>member</span>
-            </p>
-          </div>
+        <figure class="about-affiliation">
+          <img
+            src="about-pics/scope-logo.png"
+            alt="SCOPE USC logo"
+          >
+          <figcaption>
+            <strong>scope usc</strong>
+            <span>member</span>
+          </figcaption>
+        </figure>
 
-          <div class="about-club">
-            <img
-              src="about-pics/shpe-logo.jpg"
-              alt="SHPE logo"
-            >
-            <p>
-              <strong>shpe</strong>
-              <span>member</span>
-            </p>
-          </div>
-        </aside>
-      </div>
+        <figure class="about-affiliation">
+          <img
+            src="about-pics/shpe-logo.jpg"
+            alt="SHPE logo"
+          >
+          <figcaption>
+            <strong>shpe</strong>
+            <span>new member advisory board</span>
+          </figcaption>
+        </figure>
+      </aside>
 
       <section class="content-section about-education">
         <p class="kicker">education</p>
@@ -219,8 +199,8 @@
 
       <footer class="site-footer">
         <div>
-          <p class="kicker">Let’s talk</p>
-          <h2>Say hello.</h2>
+          <p class="kicker">contact info</p>
+          <h2>say hi!</h2>
         </div>
 
         <div class="footer-links">
