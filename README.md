@@ -1,16 +1,22 @@
-# Lucia portfolio
+# Lucia Paulino · Portfolio
 
-Standalone HTML and CSS website, including images, resume and embedded videos.
+**Live site:** https://luciapau-30.github.io/personal-portfolio/
 
-## Preview
-Open index.html in your browser. Edit the HTML files and styles.css with any text editor.
+My personal site: projects, experience, resume, and some favorite books, movies and music. Built from scratch with plain HTML and CSS, without a framework or template.
 
-## Publish yourself
-1. Create a GitHub repository named luciapau-30.github.io in your luciapau-30 account.
-2. Upload the CONTENTS of this folder (not the ZIP or its enclosing folder). index.html must be at the repository root.
-3. In Settings > Pages, choose Deploy from a branch, main, /(root), and Save.
-4. GitHub will show the published address after deployment.
+## Pages
 
-Publishing through GitHub Pages makes the website accessible to visitors. No deployment has been performed for you.
+| Page | What's there |
+| --- | --- |
+| `index.html` | Landing page |
+| `about.html` | Background, experience, education, organizations |
+| `projects.html` | Project write-ups with demo videos |
+| `reading.html` | Recommendations: books, movies, TV, albums, food |
 
-Instructions: https://docs.github.com/pages/quickstart
+## Run locally
+
+Open `index.html` in a browser. No build step is needed.
+
+## Deployment
+
+Served with GitHub Pages from the `main` branch, repository root.
